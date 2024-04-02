@@ -3,7 +3,9 @@
 ## What is Docker?
 
 - Docker is a tool designed to make it easier to create, deply, and run applications by using containers.
+
 - Containers allow developers to package an application and its dependencies into a single unit, ensuring consistency across different environments.
+
 - Docker provides a lightweight, portable, and self-sufficient environment for applications.
 
 ## When/Why to use Docker?
@@ -25,6 +27,7 @@
     - Containers consume fewer resources compared to traditional virtual machines, making them more efficient.
 
 5. **Scalability&colon;**
+
     - Docker makes it easy to scale applications horizontally by adding more containers as needed.
 
 ## Effective Use Cases&colon;
@@ -46,6 +49,7 @@
     - Docker allows developers to build and test applications on their local machines before deploying them to production environments, ensuring compatibility across different platforms.
 
 5. **Legacy Application Modernization&colon;**
+
     - Docker can be used to containerize legacy applications, making them more portable and easier to manage.
 
 ### Overall, Docker simplifies the process of deploying and managing applications, making it a valuable tools for developers, DevOps teams, and system administrators alike
