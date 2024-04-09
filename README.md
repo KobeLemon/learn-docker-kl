@@ -1,4 +1,6 @@
-This is my personal repo for learning Docker
+This is my personal repository for learning Docker
+
+![Docker Logo](/images/docker-logo.png)
 
 # How to Learn Docker&colon;
 
@@ -91,4 +93,4 @@ Visual Studio Code (VS Code) is a popular integrated development environment (ID
     - It checks Dockerfiles for syntax errors, best practices violations, and potential issues, helping you write cleaner and more efficient Dockerfiles.
     - The extension integrates seamlessly with VS Code's editor, providing instant feedback on Dockerfile code quality.
 
-By installing these key extensions, you can streamline your Docker development workflow and leverage the power of Docker directly within Visual Studio Code. These extensions offer a range of features, from basic Docker management to advanced Dockerfile editing and Docker Compose support, enhancing your productivity as a Docker developer.
+**By installing these key extensions, you can streamline your Docker development workflow and leverage the power of Docker directly within Visual Studio Code. These extensions offer a range of features, from basic Docker management to advanced Dockerfile editing and Docker Compose support, enhancing your productivity as a Docker developer**.

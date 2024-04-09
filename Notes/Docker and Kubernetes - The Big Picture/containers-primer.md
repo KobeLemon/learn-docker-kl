@@ -1,6 +1,24 @@
+![Docker Logo](/images/docker-logo.png)
+
 # Containers&colon; Primer
 
-This file contains notes for the "Containers&colon; Primer" section of the [Docker and Kubernetes&colon; The Big Picture](https://app.pluralsight.com/library/courses/docker-kubernetes-big-picture/table-of-contents) PluralSight Class.
+This file contains notes for the "Containers: Primer" section of the [Docker and Kubernetes&colon; The Big Picture](https://app.pluralsight.com/library/courses/docker-kubernetes-big-picture/table-of-contents) PluralSight Class.
+
+## Summary&colon;
+
+- In the "old days" you used one server for one app which had upfront/operating costs and wasted a lot of server potential.
+
+- VMWare allowed multiple apps to run on one server. This was more efficient than single server/apps, but it was still slow because you had to run separate VMs & OS's for each app.
+
+- Containers use very little resources compared to VMs so containers are faster, cheaper, and give us better utilization. They need no VM & only one OS for all apps.
+
+- You can use Containers like VMs, for example Docker Inc. has a program called "**Modernize Traditional Apps**" where you shift old legacy apps into containers. This works, but it's like using a swiss army knife to only cut paper: sure it works, but you aren't utilizing the knife effectively and the rest of the tools are wasted.
+
+- While containers are very useful and used in the majority, containers won't entirely replace VMs or even mainframes. Sometimes certain people prefer VMs/mainframes, sometimes it's way too much work to port over to containers, etc.
+
+- Containers consist of a Docker Image which is a pre-packed application, or a VM template. It has everything you need to run an application wrapped up in a single bundle.
+
+## ----------------------- Deeper Explanation -----------------------
 
 ## The Bad Old Days&colon;
 
@@ -50,7 +68,7 @@ This file contains notes for the "Containers&colon; Primer" section of the [Dock
 
 - A big advantage of containers over VMs is that containers use only one single OS for all containers/apps, not a separate OS for each app.
 
-- After the single OS is created, you create separate containers, one for each app. 1 &colon; 1 ratio.
+- After the single OS is created, you create separate containers, one for each app. 1 : 1 ratio.
 
 - Containers are smaller and more efficient than VMs.
 
@@ -73,20 +91,20 @@ This file contains notes for the "Containers&colon; Primer" section of the [Dock
 - This is the basic command to run a docker image container. There are more options you can add, but those are more advanced.
 
     ```dockerfile
-    docker container run -d --name APPNAMEHERE -p PORTHERE&colon;PORTHERE FILEPATHHERE&colon;TAGHERE
+    docker container run -d --name APPNAMEHERE -p PORTHERE:PORTHERE FILEPATHHERE:TAGHERE
     ```
 
 - Class Example&colon;
 
     ```dockerfile
-    docker container run -d --name web -p 8080&colon;8080 nigelpoulton/ctr-demo&colon;1
+    docker container run -d --name web -p 8080&:8080 nigelpoulton/ctr-demo&:1
     ```
 
-- To access the Docker Image container after you run it, you need to know the server's IP address ( `12.345.678.012` ) & the exposed network port ( `8080` ). Example&colon; `12.345.678.012&colon;8080`
+- To access the Docker Image container after you run it, you need to know the server's IP address ( `12.345.678.012` ) & the exposed network port ( `8080` ). Example&: `12.345.678.012&:8080`
 
-- To stop a Docker Image, you run this command&colon; `docker stop APPNAMEHERE`, then you refresh the browser & it should show the port is closed & not running. Class Example&colon; `docker stop web`
+- To stop a Docker Image, you run this command&: `docker stop APPNAMEHERE`, then you refresh the browser & it should show the port is closed & not running. Class Example&: `docker stop web`
 
-- You can restart the Docker Image quickly with this command&colon; `docker container start APPNAMEHERE`, then you refresh the browser & it should show the port is closed & not running. Class Example&colon; `docker container start web`
+- You can restart the Docker Image quickly with this command&: `docker container start APPNAMEHERE`, then you refresh the browser & it should show the port is closed & not running. Class Example&: `docker container start web`
 
 ## Legacy/Monolithic Apps
 
@@ -97,15 +115,3 @@ This file contains notes for the "Containers&colon; Primer" section of the [Dock
 - This is strong because it's all contained within one location, but it's bad because if you need to make any change, you are changing the entire massive program and you could easily break something. The only way to fix something is to bring the entire app down until you fix it, and it might take a long time, which is not ideal especially for a business.
 
 - This is where **cloud native** and **microservices** are great because they break the program into small pieces. Any changes are made to only the related microservice(s) and it will update wherever that piece is used. Only the item being changed needs to be down for changes.
-
-## Recap&colon;
-
-- Using one server for one app took too long, cost too much, and resulted in a lot of waste.
-
-- VMWare allowed multiple apps to run on one server.
-
-- Containers came along which does not use nearly as much bloatware as VMs so they are faster, cheaper, and give us better utilization.
-
-- You can use Containers like VMs, for example Docker Inc. has a program called "**Modernize Traditional Apps**" where you shift old legacy apps into containers. This works, but it's like using a swiss army knife to only cut paper&colon; sure it works, but you aren't utilizing the knife effectively and the rest of the tools are wasted.
-
-- While containers are very useful and used in te majority, containers won't entirely replace VMs or even mainframes. Sometimes certain people prefer VMs/mainframes, sometimes it's way too much work to port over to containers, etc.

@@ -1,12 +1,14 @@
+![Docker Logo](/images/docker-logo.png)
+
 # ALL ABOUT DOCKER
 
 ## What is Docker?
 
-- Docker is a tool designed to make it easier to create, deply, and run applications by using containers.
+-   Docker is a tool designed to make it easier to create, deply, and run applications by using containers.
 
-- Containers allow developers to package an application and its dependencies into a single unit, ensuring consistency across different environments.
+-   Containers allow developers to package an application and its dependencies into a single unit, ensuring consistency across different environments.
 
-- Docker provides a lightweight, portable, and self-sufficient environment for applications.
+-   Docker provides a lightweight, portable, and self-sufficient environment for applications.
 
 ## When/Why to use Docker?
 
