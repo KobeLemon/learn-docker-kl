@@ -1,10 +1,10 @@
-![Docker Logo](/images/docker-logo.png)
+![Docker Logo](/images/docker/docker-logo.png)
 
 # Docker
 
-This file contains notes for the "Docker" section of the [Docker and Kubernetes: The Big Picture](https://app.pluralsight.com/library/courses/docker-kubernetes-big-picture/table-of-contents) PluralSight Class.
+This file contains notes for the "**Docker**" section of the [Docker and Kubernetes: The Big Picture](https://app.pluralsight.com/library/courses/docker-kubernetes-big-picture/table-of-contents) PluralSight Class by Nigel Poulton.
 
-## Summary&colon;
+## Summary
 
 - Docker & Containers are key to moving to modern cloud native microservices design.
 
@@ -13,11 +13,11 @@ This file contains notes for the "Docker" section of the [Docker and Kubernetes:
 
   2. Docker the technology: Apps in containers, 1. Write Code 2. Build a Docker Image 3. Push to a Registry 4. Start a Container.
 
-- Learning Docker is easy, but it's more complex running it at scale. There are several tools to help, but two common tools are **Docker Swarm** & **Kubernetes**.
+- Learning Docker is easy, but it's more complex running it at scale. There are several tools to help, but two common tools are **Docker Swarm** & **Kubernetes** (k8s is most common).
 
 ## ----------------------- Deeper Explanation -----------------------
 
-## Docker, Inc&colon;
+## Docker, Inc
 
 - Docker, Inc. is a tech startup from San Francisco and it's the main sponsor behind the open-source container technology "Docker".
 
@@ -27,11 +27,11 @@ This file contains notes for the "Docker" section of the [Docker and Kubernetes:
 
 - "**Docker**" is slang for a "dock worker". The Docker tech is a lot like a shipping port so this slang makes sense.
 
-## Docker: The Technology&colon;
+## Docker: The Technology
 
 - **Containers are like fast, lightweight virtual machines, and Docker makes running our apps inside of containers really easy.**
 
-- ### Community Edition (CE)&colon;
+- ### Community Edition (CE)
 
   - Open source
 
@@ -39,7 +39,7 @@ This file contains notes for the "Docker" section of the [Docker and Kubernetes:
 
   - Quick release cycle
 
-- ### Enterprise Edition (EE)&colon;
+- ### Enterprise Edition (EE)
 
   - Slower release cycle
 
@@ -47,7 +47,7 @@ This file contains notes for the "Docker" section of the [Docker and Kubernetes:
 
   - Official support by Docker, Inc.
 
-## Docker Demo&colon;
+## Docker Demo
 
 - In the cloud native microservices world, every single service (Web, API GW, Catalog, Cart, Checkout, etc.) is coded separately and each one lives in its own container.
 
@@ -55,11 +55,11 @@ This file contains notes for the "Docker" section of the [Docker and Kubernetes:
 
 - This means each service can be fixed, updated, etc. independent from the rest.
 
-- ### Docker Workflow&colon;
+- ### Docker Workflow
 
 1. Write Code 2. Build a Docker Image 3. Push to a Registry 4. Start a Container
 
-![Docker Workflow](/images/docker-workflow.png)
+![Docker Workflow](/images/docker/docker-workflow.png)
 
 - Windows PowerShell Commands to build/run a Docker Image:
 
@@ -67,7 +67,7 @@ This file contains notes for the "Docker" section of the [Docker and Kubernetes:
 
 - Class Example: `PS: C:\docker-demo> docker image build -t nigelpoulton/ctr-demo:2 .`
 
-- ### Build Image Explanation&colon;
+- ### Build Image Explanation
 
   - `docker` denotes this is a `docker` command.
 
@@ -97,7 +97,7 @@ This file contains notes for the "Docker" section of the [Docker and Kubernetes:
 
 - Those commands finished step 2 of the workflow (**Build a Docker Image**)
 
-- ### Step 3 - Push to Registry&colon;
+- ### Step 3 - Push to Registry
 
   - Next, you push the image to a registry. You can have your own on-premises or private registries, or push to DockerHub.
 
@@ -107,7 +107,7 @@ This file contains notes for the "Docker" section of the [Docker and Kubernetes:
 
   - DockerHub is really similar to GitHub, your Docker Image should show up shortly after pushing it to DH.
 
-- ### Step 4 - Run Container&colon;
+- ### Step 4 - Run Container
 
   - Next, you run the container with this command: `docker container run -d --name APPNAME -p PORT:PORT FILEPATH:TAG`
 

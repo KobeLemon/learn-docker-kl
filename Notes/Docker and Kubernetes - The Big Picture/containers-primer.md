@@ -1,10 +1,10 @@
-![Docker Logo](/images/docker-logo.png)
+![Docker Logo](/images/docker/docker-logo.png)
 
-# Containers&colon; Primer
+# Containers Primer
 
-This file contains notes for the "Containers: Primer" section of the [Docker and Kubernetes&colon; The Big Picture](https://app.pluralsight.com/library/courses/docker-kubernetes-big-picture/table-of-contents) PluralSight Class.
+This file contains notes for the "**Containers: Primer**" section of the [Docker and Kubernetes: The Big Picture](https://app.pluralsight.com/library/courses/docker-kubernetes-big-picture/table-of-contents) PluralSight Class by Nigel Poulton.
 
-## Summary&colon;
+## Summary
 
 - In the "old days" you used one server for one app which had upfront/operating costs and wasted a lot of server potential.
 
@@ -20,7 +20,7 @@ This file contains notes for the "Containers: Primer" section of the [Docker and
 
 ## ----------------------- Deeper Explanation -----------------------
 
-## The Bad Old Days&colon;
+## The Bad Old Days
 
 - Applications run businesses.
 
@@ -38,7 +38,7 @@ This file contains notes for the "Containers: Primer" section of the [Docker and
 
 - 99 times out of 100, they ended up with overpowered servers that only used maybe 5% - 10% of their full operating power.
 
-## Hello VMWare&colon;
+## Hello VMWare
 
 - The world changed for the better once VMWare came along.
 
@@ -48,7 +48,7 @@ This file contains notes for the "Containers: Primer" section of the [Docker and
 
 - 99 times out of 100, you only buy a new server when your existing server(s) is/are too full.
 
-## VMWarts&colon;
+## VMWarts
 
 - A physical server has processors, memory, and disk space.
 
@@ -64,7 +64,7 @@ This file contains notes for the "Containers: Primer" section of the [Docker and
 
 - All VMs/OS needs License costs, admin costs such as patching, updates, AV, & more.
 
-## Containers Explained&colon;
+## Containers Explained
 
 - A big advantage of containers over VMs is that containers use only one single OS for all containers/apps, not a separate OS for each app.
 
@@ -94,7 +94,7 @@ This file contains notes for the "Containers: Primer" section of the [Docker and
     docker container run -d --name APPNAMEHERE -p PORTHERE:PORTHERE FILEPATHHERE:TAGHERE
     ```
 
-- Class Example&colon;
+- Class Example
 
     ```dockerfile
     docker container run -d --name web -p 8080&:8080 nigelpoulton/ctr-demo&:1
