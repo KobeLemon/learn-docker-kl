@@ -63,7 +63,7 @@ This file contains notes for the "**Docker**" section of the [Docker and Kuberne
 
 - Windows PowerShell Commands to build/run a Docker Image:
 
-- `PS: C:\FOLDERPATH> docker image build -t REPOSITORY/APPNAME:2 .`
+- `PS: C:\FOLDERPATH> docker image build -t DOCKERID/APPNAME:2 .`
 
 - Class Example: `PS: C:\docker-demo> docker image build -t nigelpoulton/ctr-demo:2 .`
 
@@ -77,7 +77,7 @@ This file contains notes for the "**Docker**" section of the [Docker and Kuberne
 
   - `-t` denotes it is running with a tag.
 
-  - `REPOSITORY` denotes this is the repository that contains the Docker Image.
+  - `DOCKERID` denotes this is the user that is building the Docker Image. This is your Docker username.
 
   - `APPNAME` denotes this is the name of the Docker Image.
 
@@ -87,7 +87,7 @@ This file contains notes for the "**Docker**" section of the [Docker and Kuberne
 
 - Once this command runs, Docker takes the source code & doing the hard work to package it as a container/image (an image is like a stopped container).
 
-- Once that is done, you use the following command to open the image: `PS: C:\FOLDERPATH> docker image ls REPOSITORY/APPNAME:TAG`
+- Once that is done, you use the following command to open the image: `PS: C:\FOLDERPATH> docker image ls DOCKERID/APPNAME:TAG`
 
 - Class Example: `PS: C:\docker-demo> docker image ls nigelpoulton/ctr-demo:2`
 
@@ -101,7 +101,7 @@ This file contains notes for the "**Docker**" section of the [Docker and Kuberne
 
   - Next, you push the image to a registry. You can have your own on-premises or private registries, or push to DockerHub.
 
-  - `PS: C:\FOLDERPATH> docker image push REPOSITORY/APPNAME:TAG`
+  - `PS: C:\FOLDERPATH> docker image push DOCKERID/APPNAME:TAG`
 
   - Class Example: `PS: C:\docker-demo> docker image push nigelpoulton/ctr-demo:2`
 
