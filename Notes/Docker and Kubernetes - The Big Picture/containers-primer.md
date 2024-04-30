@@ -88,23 +88,15 @@ This file contains notes for the "**Containers: Primer**" section of the [Docker
 
 - A Docker Image is a pre-packed application, or a VM template. It has everything you need to run an application wrapped up in a single bundle.
 
-- This is the basic command to run a docker image container. There are more options you can add, but those are more advanced.
+- This is the basic command to run a docker image container. There are more options you can add, but those are more advanced. `docker container run -d --name APPNAME -p PORT:PORT DOCKERUSER/REPO:TAG`
 
-    ```dockerfile
-    docker container run -d --name APPNAMEHERE -p PORTHERE:PORTHERE FILEPATHHERE:TAGHERE
-    ```
-
-- Class Example
-
-    ```dockerfile
-    docker container run -d --name web -p 8080&:8080 nigelpoulton/ctr-demo&:1
-    ```
+- Class Example: `docker container run -d --name web -p 8080&:8080 nigelpoulton/ctr-demo:1`
 
 - To access the Docker Image container after you run it, you need to know the server's IP address ( `12.345.678.012` ) & the exposed network port ( `8080` ). Example&: `12.345.678.012&:8080`
 
-- To stop a Docker Image, you run this command&: `docker stop APPNAMEHERE`, then you refresh the browser & it should show the port is closed & not running. Class Example&: `docker stop web`
+- To stop a Docker Image, you run this command&: `docker stop APPNAME`, then you refresh the browser & it should show the port is closed & not running. Class Example&: `docker stop web`
 
-- You can restart the Docker Image quickly with this command&: `docker container start APPNAMEHERE`, then you refresh the browser & it should show the port is closed & not running. Class Example&: `docker container start web`
+- You can restart the Docker Image quickly with this command&: `docker container start APPNAME`, then you refresh the browser & it should show the port is closed & not running. Class Example&: `docker container start web`
 
 ## Legacy/Monolithic Apps
 

@@ -1,4 +1,4 @@
-This is my personal repository for learning Docker
+This is my personal repository for learning Docker. I am not affiliated with Docker Inc, Nigel Poulton, Pluralsight, or any other individuals/organizations mentioned in this repository.
 
 ![Docker Logo](/images/docker/docker-logo.png)
 

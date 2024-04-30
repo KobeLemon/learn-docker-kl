@@ -109,6 +109,6 @@ This file contains notes for the "**Docker**" section of the [Docker and Kuberne
 
 - ### Step 4 - Run Container
 
-  - Next, you run the container with this command: `docker container run -d --name APPNAME -p PORT:PORT FILEPATH:TAG`
+  - Next, you run the container with this command: `docker container run -d --name APPNAME -p PORT:PORT DOCKERUSER/REPO:TAG`
 
   - Class Example: `docker container run -d --name web -p 8080:8080 nigelpoulton/ctr-demo:2`
