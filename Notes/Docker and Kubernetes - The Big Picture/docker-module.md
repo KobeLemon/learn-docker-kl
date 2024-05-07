@@ -63,9 +63,9 @@ This file contains notes for the "**Docker**" section of the [Docker and Kuberne
 
 - Windows PowerShell Commands to build/run a Docker Image:
 
-- `PS: C:\FOLDERPATH> docker image build -t DOCKERID/APPNAME:2 .`
+- `docker image build -t DOCKERID/APPNAME:2 .`
 
-- Class Example: `PS: C:\docker-demo> docker image build -t nigelpoulton/ctr-demo:2 .`
+- Class Example: `docker image build -t nigelpoulton/ctr-demo:2 .`
 
 - ### Build Image Explanation
 
@@ -87,9 +87,9 @@ This file contains notes for the "**Docker**" section of the [Docker and Kuberne
 
 - Once this command runs, Docker takes the source code & doing the hard work to package it as a container/image (an image is like a stopped container).
 
-- Once that is done, you use the following command to open the image: `PS: C:\FOLDERPATH> docker image ls DOCKERID/APPNAME:TAG`
+- Once that is done, you use the following command to open the image: `docker image ls DOCKERID/APPNAME:TAG`
 
-- Class Example: `PS: C:\docker-demo> docker image ls nigelpoulton/ctr-demo:2`
+- Class Example: `docker image ls nigelpoulton/ctr-demo:2`
 
 - All is the same as Build Image except for no `build`, `-t`, or `.`.
 
@@ -101,9 +101,9 @@ This file contains notes for the "**Docker**" section of the [Docker and Kuberne
 
   - Next, you push the image to a registry. You can have your own on-premises or private registries, or push to DockerHub.
 
-  - `PS: C:\FOLDERPATH> docker image push DOCKERID/APPNAME:TAG`
+  - `docker image push DOCKERID/APPNAME:TAG`
 
-  - Class Example: `PS: C:\docker-demo> docker image push nigelpoulton/ctr-demo:2`
+  - Class Example: `docker image push nigelpoulton/ctr-demo:2`
 
   - DockerHub is really similar to GitHub, your Docker Image should show up shortly after pushing it to DH.
 

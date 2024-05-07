@@ -17,7 +17,7 @@ This is my personal repository for learning Docker. I am not affiliated with Doc
 
 3. **Official Documentation**
 
-    - Docker's official documentation is an excellent resource for learning. Start with the "Get Started" guide, which walks you through the basics of Docker.
+    - Docker's official documentation is an excellent resource for learning. Start with the "[Get Started](https://docs.docker.com/guides)" guide, which walks you through the basics of Docker.
 
 4. **Online Courses and Tutorials**
 

@@ -72,19 +72,25 @@ This file contains notes for the "**Deploying a Containerized App**" section of 
 
 - You want to host the image to a centralized registries where it can be accessed from different environments.
 
+- To push to a registry, you use the command `docker image push -t DOCKERID/APPNAME:TAG`
+
+- Class Example: `docker image push -t nigelpoulton/ctr-demo:2023`
+
+- If you haven't authenticated PowerShell or Command Prompt with Docker yet, you might to login to Docker. When you try pushing to your Docker Hub account, it will prompt you to do so if you are not logged in yet.
+
 - When you push an image to DockerHub or any other centralized registry, it defaults to the **OS/ARCH** that matches the computer you are on. This means the app will only run on computers that share the same **OS/ARCH**.
 
 - To get around this, you can use the `docker buildx build` command to specify the platform(s) you want to run.
 
 - Class Example: `docker buildx build --platform linux/arm64/v8,linux/amd64 --push --tag nigelpoulton/gsd:ctr2023 .`
 
-- After you push your image, you need to pull up the registry and check the image is there & registered under the correct platform(s) you want it to have.
+- You DO NOT need to push the image to the regsitry again. You just need to pull up the registry and check the image is there & registered under the correct platform(s) you want it to have. You might need to refresh the page.
 
 ## Running a Containerized App
 
 - When you build a docker image, it will initially be stored locally on your machine. You can run it locally, or run it via the registry.
 
-- If you want to run it via a registry, it is good to delete the local image using this command: `docker image rm DOCKERID/FOLDERNAME:IMAGENAME`
+- If you want to run it via a registry, it is good to delete the local image using this command: `docker image rm DOCKERID/FOLDERNAME:IMAGENAME` because if you do not, `docker container run` will always run the local copy of the image before it looks for a registry image.
 
 - Class Example: `docker image rm nigelpoulton/gsd:ctr2023`
 
@@ -108,7 +114,7 @@ This file contains notes for the "**Deploying a Containerized App**" section of 
 
 - Images are buildtime constructs and containers are runtime constructs.
 
-![Container Image VM Analogy](/images/docker/container-image-vm-analogy.png)
+  ![Container Image VM Analogy](/images/docker/container-image-vm-analogy.png)
 
 ## Managing a Containerized App
 
